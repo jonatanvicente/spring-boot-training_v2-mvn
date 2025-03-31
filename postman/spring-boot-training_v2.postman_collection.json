@@ -1,0 +1,304 @@
+{
+	"info": {
+		"_postman_id": "1a002bfe-839d-48f3-9670-b253174637f8",
+		"name": "spring-boot-training_v2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "1005741"
+	},
+	"item": [
+		{
+			"name": "GET Initial - Test",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8763/springboottraining/api/v1/initial/test",
+					"host": [
+						"localhost"
+					],
+					"port": "8763",
+					"path": [
+						"springboottraining",
+						"api",
+						"v1",
+						"initial",
+						"test"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Initial - Test Reactive",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8763/springboottraining/api/v1/initial/test-reactive",
+					"host": [
+						"localhost"
+					],
+					"port": "8763",
+					"path": [
+						"springboottraining",
+						"api",
+						"v1",
+						"initial",
+						"test-reactive"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Today - Ping",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8764/springboottraining/api/v1/today/ping",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8764",
+					"path": [
+						"springboottraining",
+						"api",
+						"v1",
+						"today",
+						"ping"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Today - today",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8764/springboottraining/api/v1/today/today",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8764",
+					"path": [
+						"springboottraining",
+						"api",
+						"v1",
+						"today",
+						"today"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Today - todayJson",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8764/springboottraining/api/v1/today/todayJson",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8764",
+					"path": [
+						"springboottraining",
+						"api",
+						"v1",
+						"today",
+						"todayJson"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Airports - airport/all",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8763/springboottraining/api/v1/data/airport/all",
+					"host": [
+						"localhost"
+					],
+					"port": "8763",
+					"path": [
+						"springboottraining",
+						"api",
+						"v1",
+						"data",
+						"airport",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Airport - aiport/departures",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8763/springboottraining/api/v1/data/airport/departures/JFK",
+					"host": [
+						"localhost"
+					],
+					"port": "8763",
+					"path": [
+						"springboottraining",
+						"api",
+						"v1",
+						"data",
+						"airport",
+						"departures",
+						"JFK"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Airport - airport/count",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8763/springboottraining/api/v1/data/airport/count",
+					"host": [
+						"localhost"
+					],
+					"port": "8763",
+					"path": [
+						"springboottraining",
+						"api",
+						"v1",
+						"data",
+						"airport",
+						"count"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Security - Star Wars Vehicles",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqdmljZW50ZUBnbWFpbC5jb20iLCJhdXRob3JpdGllcyI6WyJBRE1JTiJdLCJpYXQiOjE3NDIzODU4OTUsImV4cCI6MTc0MjQyMTg5NX0.hTPHBypouyK6KZYyB0AzfDKjhYUUboTKELICoZFm-PQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8762/springboottraining/api/v1/starwars/vehicles",
+					"host": [
+						"localhost"
+					],
+					"port": "8762",
+					"path": [
+						"springboottraining",
+						"api",
+						"v1",
+						"starwars",
+						"vehicles"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Security - Login Get Token",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "email",
+						"value": "",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"jvicente@gmail.com\",\n    \"password\": \"56589pp05s\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8761/springboottraining/api/v1/login",
+					"host": [
+						"localhost"
+					],
+					"port": "8761",
+					"path": [
+						"springboottraining",
+						"api",
+						"v1",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET CircuitBreaker - Time Delay",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/timeDelay/10",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"timeDelay",
+						"10"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET CircuitBreaker - Time Out",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/timeout/10",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"timeout",
+						"10"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

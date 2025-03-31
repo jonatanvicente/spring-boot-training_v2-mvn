@@ -1,0 +1,73 @@
+spring:
+  application:
+    name: spring-boot-initial
+  jmx:
+    enabled: true
+
+springfox:
+  documentation:
+    auto-startup: false
+
+server:
+  port: 8763
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+
+url:
+  connection_timeout: 30000
+  maxBytesInMemory: 30000000
+  ds_test: https://swapi.py4e.com/api/vehicles/
+
+europe:
+  countryNames:
+    - "Spain"
+    - "United Kingdom"
+    - "Germany"
+    - "Norway"
+    - "Sweden"
+    - "Netherlands"
+    - "Portugal"
+    - "Italy"
+    - "Switzerland"
+    - "Ireland"
+    - "Denmark"
+    - "France"
+    - "Greece"
+    - "Liechtenstein"
+    - "Romania"
+    - "Montenegro"
+    - "Poland"
+    - "Russia"
+    - "San Marino"
+    - "Serbia"
+    - "Slovakia"
+    - "Turkey"
+    - "North Macedonia"
+    - "Monaco"
+    - "Montenegro"
+    - "Moldova"
+    - "Malta"
+    - "Lithuania"
+    - "Ukraine"
+    - "Luxembourg"
+    - "Latvia"
+    - "Kazakhstan"
+    - "Iceland"
+    - "Hungary"
+    - "Finland"
+
+logging:
+  level:
+    root: INFO
+    "[org.springframework]": ERROR
+    "[com.training.springbootinitial]": INFO
+  pattern:
+    # console: Spring's default
+    file: "%date %5level %-40.40logger{39} [%thread] %msg%n"
+#  file:
+#    name: opendata.log
