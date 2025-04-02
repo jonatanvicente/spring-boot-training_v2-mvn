@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
+import reactor.core.publisher.Mono;
 
 @RestController
 @RequestMapping(value = "/springboottraining/api/v1/travelagency")
@@ -24,6 +25,13 @@ public class TravelAgencyController {
     @ResponseStatus(HttpStatus.OK)
     public String getPing(){
         return "Welcome to our Travel Agency  !!!";
+    }
+
+
+
+
+    public Mono<?> getTicket(){
+        return Mono.just("Ticket");
     }
 
 }
