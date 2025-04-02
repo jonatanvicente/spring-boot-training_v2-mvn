@@ -18,3 +18,7 @@ Requisitos:
 ### Spring Boot Data
 
 - [Highlights](spring-boot-data/README.md)
+
+### Spring Boot Travel Agency
+
+- [Highlights](spring-boot-travelagency/README.md)
