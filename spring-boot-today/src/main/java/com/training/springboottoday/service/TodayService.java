@@ -22,6 +22,11 @@ public class TodayService {
         return Mono.just(response);
     }
 
+    public Mono<TodayJsonDto> getTodayCustom(String pattern){
+        TodayJsonDto response = new TodayJsonDto(getToday(pattern));
+        return Mono.just(response);
+    }
+
     public Mono<TodayJsonDto> getTodayParameterized(TodayPattern pattern){
         TodayJsonDto response = new TodayJsonDto(getToday(pattern.getPattern()));
         return Mono.just(response);

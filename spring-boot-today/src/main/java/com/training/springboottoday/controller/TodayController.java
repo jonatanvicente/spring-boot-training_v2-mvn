@@ -72,4 +72,19 @@ public class TodayController {
     }
 
 
+    @Operation(summary = "You can call this to get today's date in JSON format", tags = "Get Today's Date")
+    @GetMapping("/todayJsonParameterizedUrl/{pattern}")
+    @ResponseStatus(HttpStatus.OK)
+    public Mono<?> getTodayJsonWithParamUrl(@PathVariable String pattern){
+        return todayService.getTodayCustom(pattern);
+    }
+
+    @Operation(summary = "You can call this to get today's date in JSON format", tags = "Get Today's Date")
+    @GetMapping("/getTodayJsonWithParamUrlRequest")
+    @ResponseStatus(HttpStatus.OK)
+    public Mono<?> getTodayJsonWithParamUrlRequest(@RequestParam String pattern){
+        return todayService.getTodayCustom(pattern);
+    }
+
+
 }

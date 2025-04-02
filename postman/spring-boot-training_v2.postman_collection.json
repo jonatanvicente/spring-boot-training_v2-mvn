@@ -120,6 +120,94 @@
 			"response": []
 		},
 		{
+			"name": "GET Today - Json Parameterized",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"pattern\": \"dd/MM/YYYY\"\n\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8764/springboottraining/api/v1/today/todayJsonParameterized",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8764",
+					"path": [
+						"springboottraining",
+						"api",
+						"v1",
+						"today",
+						"todayJsonParameterized"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Today - Json Parameterized Url",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8764/springboottraining/api/v1/today/todayJsonParameterizedUrl/dd-mm-yyyy",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8764",
+					"path": [
+						"springboottraining",
+						"api",
+						"v1",
+						"today",
+						"todayJsonParameterizedUrl",
+						"dd-mm-yyyy"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Today - Json Parameterized Url Param",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8764/springboottraining/api/v1/today/getTodayJsonWithParamUrlRequest?pattern=dd-mm-yyyy",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8764",
+					"path": [
+						"springboottraining",
+						"api",
+						"v1",
+						"today",
+						"getTodayJsonWithParamUrlRequest"
+					],
+					"query": [
+						{
+							"key": "pattern",
+							"value": "dd-mm-yyyy"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "GET Airports - airport/all",
 			"request": {
 				"method": "GET",
