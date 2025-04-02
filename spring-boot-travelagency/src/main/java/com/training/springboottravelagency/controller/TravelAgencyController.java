@@ -13,6 +13,13 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping(value = "/springboottraining/api/v1/travelagency")
 public class TravelAgencyController {
 
+
+    @Operation(summary = "Ping our Travel Agency", tags = "Ping")
+    @ApiResponses({
+            @ApiResponse(responseCode = "200", description = "OK"),
+            @ApiResponse(responseCode = "404", description = "Not Found"),
+            @ApiResponse(responseCode = "503", description = "Service Unavailable"),
+    })
     @GetMapping("/ping")
     @ResponseStatus(HttpStatus.OK)
     public String getPing(){
