@@ -387,6 +387,58 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "GET Today - Json Parameterized Url Param",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8764/springboottraining/api/v1/today/getTodayJsonWithParamUrlRequest?pattern=dd-mm-yyyy",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8764",
+					"path": [
+						"springboottraining",
+						"api",
+						"v1",
+						"today",
+						"getTodayJsonWithParamUrlRequest"
+					],
+					"query": [
+						{
+							"key": "pattern",
+							"value": "dd-mm-yyyy"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET TravelAgency - Ping",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8764/springboottraining/api/v1/travelagency/ping",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8764",
+					"path": [
+						"springboottraining",
+						"api",
+						"v1",
+						"travelagency",
+						"ping"
+					]
+				}
+			},
+			"response": []
 		}
 	]
 }

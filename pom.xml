@@ -13,5 +13,6 @@
         <module>spring-boot-initial</module>
         <module>spring-boot-circuitbreaker</module>
         <module>spring-boot-data</module>
+        <module>spring-boot-travelagency</module>
     </modules>
 </project>
