@@ -1,5 +1,6 @@
 package com.training.springbootdata.entity;
 
+import javax.persistence.*;
 
 @Entity
 @Table(name = "Flights")

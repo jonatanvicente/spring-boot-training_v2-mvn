@@ -14,5 +14,6 @@
         <module>spring-boot-circuitbreaker</module>
         <module>spring-boot-data</module>
         <module>spring-boot-travelagency</module>
+        <module>spring-boot-security</module>
     </modules>
 </project>

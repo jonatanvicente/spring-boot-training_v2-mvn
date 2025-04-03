@@ -1,0 +1,47 @@
+spring:
+  application:
+    name: springboottraining-login
+  jmx:
+    enabled: true
+
+server:
+  port: 8761
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+security:
+  datasource:
+    signUpUrl: /springboottraining/api/v1/login
+    secret: SgVkYp3s6v9y$B&E)H+MbQeThWmZq4t7
+    # Mind the trailing white space below!
+    tokenPrefix: Bearer 
+    # 10 hours, expressed in milliseconds
+    expiresIn: 36_000_000
+    authoritiesClaim: authorities
+    err: Auth Error, Token Unavailable
+  testuser:
+    email: jvicente@gmail.com
+    password: 56589pp05s
+    roles: [ADMIN]
+  superuser:
+    email: superuser@gmail.com
+    roles: [SUPERUSER]
+
+url:
+  # 30 seconds, expressed in milliseconds
+  connection_timeout: 30000
+
+logging:
+  level:
+    root: INFO
+    "[org.springframework]": ERROR
+    "[com.businessassistantbcn]": INFO
+  pattern:
+  # console: Spring's default
+    file: "%date %5level %-40.40logger{39} [%thread] %msg%n"
+#  file:
+#    name: login.log
