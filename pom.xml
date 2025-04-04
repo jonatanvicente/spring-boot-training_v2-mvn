@@ -15,5 +15,6 @@
         <module>spring-boot-data</module>
         <module>spring-boot-travelagency</module>
         <module>spring-boot-security</module>
+        <module>spring-boot-zmq</module>
     </modules>
 </project>
