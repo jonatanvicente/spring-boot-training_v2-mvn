@@ -285,7 +285,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqdmljZW50ZUBnbWFpbC5jb20iLCJhdXRob3JpdGllcyI6WyJBRE1JTiJdLCJpYXQiOjE3NDIzODU4OTUsImV4cCI6MTc0MjQyMTg5NX0.hTPHBypouyK6KZYyB0AzfDKjhYUUboTKELICoZFm-PQ",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqdmljZW50ZUBnbWFpbC5jb20iLCJhdXRob3JpdGllcyI6WyJBRE1JTiJdLCJpYXQiOjE3NDM2OTY5OTYsImV4cCI6MTc0MzczMjk5Nn0.Lk4zDvg83e0pCRbC2p5lvBT6JYvyTiJ8ZdpyfWf6lns",
 							"type": "string"
 						}
 					]
@@ -435,6 +435,51 @@
 						"v1",
 						"travelagency",
 						"ping"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET TravelAgency - Ticket",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8764/springboottraining/api/v1/travelagency/ticket",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8764",
+					"path": [
+						"springboottraining",
+						"api",
+						"v1",
+						"travelagency",
+						"ticket"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Zmq - Comm",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8762/springboottraining/api/v1/zmq/test",
+					"host": [
+						"localhost"
+					],
+					"port": "8762",
+					"path": [
+						"springboottraining",
+						"api",
+						"v1",
+						"zmq",
+						"test"
 					]
 				}
 			},

@@ -1,22 +1,17 @@
 package com.training.springbootzmq.controller;
 
 import com.training.springbootzmq.config.PropertiesConfig;
+import com.training.springbootzmq.dto.RequestDto;
+import com.training.springbootzmq.dto.ResponseDto;
 import com.training.springbootzmq.mqclient.ZMQClient;
-import io.swagger.v3.oas.annotations.Operation;
-import io.swagger.v3.oas.annotations.media.Content;
-import io.swagger.v3.oas.annotations.media.Schema;
-import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.cloud.client.discovery.DiscoveryClient;
-import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import reactor.core.publisher.Mono;
 
 import java.util.*;
 
@@ -43,15 +38,18 @@ public class ZmqController {
     @Value("${spring.application.name}")
     private String appName;
 
+    @Autowired
+    RequestDto requestDto;
 
-    @GetMapping(value = "/test")
+
+    @GetMapping(value = "/internalcomm")
     public String test() {
-        log.info("** Saludos desde el logger **");
+        requestDto.setUuid(UUID.fromString("dcacb291-b4aa-4029-8e9b-284c8ca80296"));
+        log.info("Sending to ZMQServer: [" + requestDto.getUuid() + "]");
 
-
-        zmqClient.sendMessage(challengeInputDto, StatisticsResponseDto.class)
+        zmqClient.sendMessage(requestDto, ResponseDto.class)
                 .thenAccept(response ->
-                        log.info("[ Response: {}" , ((StatisticsResponseDto) response).getPercent() + " ]"))
+                        log.info("[ Response received from ZMQServer: {}" , ((ResponseDto) response).getPercent() + " ]"))
                 .exceptionally(e -> {
                     log.error(e.getMessage());
                     return null;

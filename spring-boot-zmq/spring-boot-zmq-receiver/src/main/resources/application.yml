@@ -1,0 +1,48 @@
+spring:
+  application:
+    name: spring-boot-zmq-receiver
+    version: 1.0.0-RELEASE
+  autoconfigure:
+    exclude:
+      - org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration
+  jmx:
+    enabled: true
+
+springdoc:
+  swagger-ui:
+    path: "/swagger-ui-custom.html"
+    operationsSorted: method
+  api-docs:
+    enable: true
+    path: "/api-docs"
+
+server:
+  port: 8764
+  tomcat:
+    max-http-form-post-size: 2097152
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  security:
+    enabled: false
+
+zeromq:
+  socket:
+    address: tcp://*:5555
+
+url:
+  max_length: 2048
+
+logging:
+  level:
+    root: INFO
+    "[org.springframework]": ERROR
+    "[com.businessassistantbcn]": INFO
+  pattern:
+  # console: Spring's default
+    file: "%date %5level %-40.40logger{39} [%thread] %msg%n"
+#  file:
+#    name: itachallenge-user.log

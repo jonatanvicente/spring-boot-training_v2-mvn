@@ -22,3 +22,11 @@ Requisitos:
 ### Spring Boot Travel Agency
 
 - [Highlights](spring-boot-travelagency/README.md)
+
+### Spring Boot Security
+
+- [Highlights](spring-boot-security/README.md)
+
+### Spring Boot ZMQ
+
+- [Highlights](spring-boot-zmq/README.md)
