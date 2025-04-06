@@ -10,6 +10,7 @@ import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import reactor.core.publisher.Mono;
@@ -22,11 +23,17 @@ public class DataNoSqlController {
 
     private static final Logger log = LoggerFactory.getLogger(DataNoSqlController.class);
 
-    @Autowired
-    IDataNoSqlService service;
+    @GetMapping("/ping")
+    @ResponseStatus(HttpStatus.OK)
+    public String getPing(){
+        return "Bonjour !!!";
+    }
+
+/*    @Autowired
+    IDataNoSqlService service;*/
 
 
-    @GetMapping("/language")
+/*    @GetMapping("/language")
     @Operation(
             operationId = "Get all the stored languages into the Database.",
             summary = "Get to see all id language and name.",
@@ -37,5 +44,5 @@ public class DataNoSqlController {
     )
     public Mono<GenericResultDto<LanguageDto>> getAllLanguages() {
         return service.getAllLanguages();
-    }
+    }*/
 }
