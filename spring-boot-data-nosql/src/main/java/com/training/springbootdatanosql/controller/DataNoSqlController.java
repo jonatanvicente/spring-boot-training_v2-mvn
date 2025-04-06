@@ -3,10 +3,10 @@ package com.training.springbootdatanosql.controller;
 import com.training.springbootdatanosql.dto.GenericResultDto;
 import com.training.springbootdatanosql.dto.LanguageDto;
 import com.training.springbootdatanosql.service.IDataNoSqlService;
-import io.swagger.v3.oas.annotations.Operation;
+/*import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;
-import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;*/
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
