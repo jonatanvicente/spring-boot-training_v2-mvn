@@ -14,14 +14,20 @@ import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 @Service
-public class DataNoSqlServiceImp{//} implements IDataNoSqlService {
+public class DataNoSqlServiceImp implements IDataNoSqlService {
 
     private static final Logger log = LoggerFactory.getLogger(DataNoSqlServiceImp.class);
 
-/*    @Autowired
-    private LanguageRepository languageRepository;*/
+    @Autowired
+    private LanguageRepository languageRepository;
     @Autowired
     private DocumentToDtoConverter<LanguageDocument, LanguageDto> languageConverter = new DocumentToDtoConverter<>();
+
+
+    public void getAllLanguages(){
+        System.out.println("*****"+languageRepository.findAll().blockFirst().getLanguageName());
+    }
+
 
 /*    @Cacheable (value = "allLanguages")
     public Mono<GenericResultDto<LanguageDto>> getAllLanguages() {

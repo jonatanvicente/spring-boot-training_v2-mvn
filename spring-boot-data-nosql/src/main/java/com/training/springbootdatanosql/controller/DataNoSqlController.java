@@ -26,11 +26,13 @@ public class DataNoSqlController {
     @GetMapping("/ping")
     @ResponseStatus(HttpStatus.OK)
     public String getPing(){
+
+        service.getAllLanguages();
         return "Bonjour !!!";
     }
 
-/*    @Autowired
-    IDataNoSqlService service;*/
+    @Autowired
+    IDataNoSqlService service;
 
 
 /*    @GetMapping("/language")
