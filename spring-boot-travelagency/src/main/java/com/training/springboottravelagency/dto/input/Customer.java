@@ -1,4 +1,4 @@
-package com.training.springboottravelagency.dto.in;
+package com.training.springboottravelagency.dto.input;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.*;

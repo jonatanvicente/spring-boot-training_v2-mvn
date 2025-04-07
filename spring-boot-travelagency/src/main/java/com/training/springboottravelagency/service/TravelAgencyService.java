@@ -1,7 +1,6 @@
 package com.training.springboottravelagency.service;
 
-import com.training.springboottravelagency.dto.in.Customer;
-import com.training.springboottravelagency.dto.out.Ticket;
+import com.training.springboottravelagency.dto.output.Ticket;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import reactor.core.publisher.Mono;

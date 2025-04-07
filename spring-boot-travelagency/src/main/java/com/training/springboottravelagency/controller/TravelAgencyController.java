@@ -1,7 +1,6 @@
 package com.training.springboottravelagency.controller;
 
-import com.training.springboottravelagency.dto.in.Customer;
-import com.training.springboottravelagency.dto.out.Ticket;
+import com.training.springboottravelagency.dto.output.Ticket;
 import com.training.springboottravelagency.service.ITravelAgencyService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
