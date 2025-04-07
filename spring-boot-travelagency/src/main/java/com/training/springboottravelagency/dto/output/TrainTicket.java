@@ -16,7 +16,7 @@ public class TrainTicket extends Ticket {
     private String type;
 
     public TrainTicket() {
-        super.setTicketType("Bus Ticket");
+        super.setTicketType("Train Ticket");
     }
 
 }

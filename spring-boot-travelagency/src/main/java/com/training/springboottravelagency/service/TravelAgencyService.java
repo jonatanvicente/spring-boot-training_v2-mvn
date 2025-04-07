@@ -2,6 +2,7 @@ package com.training.springboottravelagency.service;
 
 import com.training.springboottravelagency.dto.input.Customer;
 import com.training.springboottravelagency.dto.output.*;
+import com.training.springboottravelagency.service.factory.TicketFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import reactor.core.publisher.Mono;
@@ -9,32 +10,11 @@ import reactor.core.publisher.Mono;
 @Service
 public class TravelAgencyService implements ITravelAgencyService{
 
-    private Ticket ticket;
+    @Autowired
+    private TicketFactory ticketFactory;
 
     @Override
     public Mono<Ticket> getTicket(Customer c) {
-
-        //TODO - falta mapping customer - FactoryTicketBuilder
-
-/*        ticket = new BusTicket();
-        ((BusTicket)ticket).setPlate("9099-MMK");
-        ((BusTicket)ticket).setNumberOfSeats(50);
-        ((BusTicket)ticket).setStops(5);
-
-        ticket = new MotorbikeTicket();
-        ((MotorbikeTicket)ticket).setPlate("9099-MMK");
-
-        ticket = new PlaneTicket();
-        ((PlaneTicket)ticket).setBrand("Boeing");
-        ((PlaneTicket)ticket).setType("Passenger");
-        ((PlaneTicket)ticket).setNumberOfSeats(200);*/
-
-/*        ticket = new TrainTicket();
-        ((TrainTicket)ticket).setStops(3);
-        ((TrainTicket)ticket).setType("Passenger");
-        ((TrainTicket)ticket).setNumberOfSeats(200);*/
-
-
-        return Mono.just(ticket);
+        return Mono.just(ticketFactory.build(c));
     }
 }
