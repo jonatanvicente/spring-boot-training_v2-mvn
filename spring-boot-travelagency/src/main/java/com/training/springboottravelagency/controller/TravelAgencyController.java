@@ -1,5 +1,6 @@
 package com.training.springboottravelagency.controller;
 
+import com.training.springboottravelagency.dto.input.Customer;
 import com.training.springboottravelagency.dto.output.Ticket;
 import com.training.springboottravelagency.service.ITravelAgencyService;
 import io.swagger.v3.oas.annotations.Operation;
@@ -7,10 +8,7 @@ import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseStatus;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import reactor.core.publisher.Mono;
 
 @RestController
@@ -42,8 +40,8 @@ public class TravelAgencyController {
     })
     @GetMapping("/ticket")
     @ResponseStatus(HttpStatus.OK)
-    public Mono<Ticket> getTicket(){
-        return travelAgencyService.getTicket();
+    public Mono<Ticket> getTicket(@RequestBody Customer customer){
+        return travelAgencyService.getTicket(customer);
     }
 
 }
