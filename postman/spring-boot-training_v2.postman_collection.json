@@ -278,6 +278,28 @@
 			"response": []
 		},
 		{
+			"name": "GET Languages - languages",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8762/springboottraining/api/v1/datanosql/language",
+					"host": [
+						"localhost"
+					],
+					"port": "8762",
+					"path": [
+						"springboottraining",
+						"api",
+						"v1",
+						"datanosql",
+						"language"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "GET Security - Star Wars Vehicles",
 			"request": {
 				"auth": {
@@ -442,9 +464,21 @@
 		},
 		{
 			"name": "GET TravelAgency - Ticket",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
 			"request": {
 				"method": "GET",
 				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n      \"age\":20\n} ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
 				"url": {
 					"raw": "http://localhost:8764/springboottraining/api/v1/travelagency/ticket",
 					"protocol": "http",
@@ -469,7 +503,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "localhost:8762/springboottraining/api/v1/zmq/test",
+					"raw": "localhost:8762/springboottraining/api/v1/zmq/internalcomm",
 					"host": [
 						"localhost"
 					],
@@ -479,7 +513,7 @@
 						"api",
 						"v1",
 						"zmq",
-						"test"
+						"internalcomm"
 					]
 				}
 			},

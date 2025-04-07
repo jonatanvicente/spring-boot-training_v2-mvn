@@ -24,12 +24,12 @@ public class DataNoSqlServiceImp implements IDataNoSqlService {
     private DocumentToDtoConverter<LanguageDocument, LanguageDto> languageConverter = new DocumentToDtoConverter<>();
 
 
-    public void getAllLanguages(){
+/*    public void getAllLanguages(){
         System.out.println("*****"+languageRepository.findAll().blockFirst().getLanguageName());
-    }
+    }*/
 
 
-/*    @Cacheable (value = "allLanguages")
+    @Cacheable (value = "allLanguages")
     public Mono<GenericResultDto<LanguageDto>> getAllLanguages() {
         Flux<LanguageDto> languagesDto = languageConverter.convertDocumentFluxToDtoFlux(languageRepository.findAll(), LanguageDto.class);
         return languagesDto.collectList().map(language -> {
@@ -37,6 +37,6 @@ public class DataNoSqlServiceImp implements IDataNoSqlService {
             resultDto.setInfo(0, language.size(), language.size(), language.toArray(new LanguageDto[0]));
             return resultDto;
         });
-    }*/
+    }
 
     }

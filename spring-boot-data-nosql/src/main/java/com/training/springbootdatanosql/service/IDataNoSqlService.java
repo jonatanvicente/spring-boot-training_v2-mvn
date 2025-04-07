@@ -6,7 +6,7 @@ import reactor.core.publisher.Mono;
 
 public interface IDataNoSqlService {
 
-    //Mono<GenericResultDto<LanguageDto>> getAllLanguages();
-    void getAllLanguages();
+    Mono<GenericResultDto<LanguageDto>> getAllLanguages();
+    //void getAllLanguages();
 
 }

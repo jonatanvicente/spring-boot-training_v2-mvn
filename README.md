@@ -19,6 +19,10 @@ Requisitos:
 
 - [Highlights](spring-boot-data/README.md)
 
+### Spring Boot Data NoSQL
+
+- [Highlights](spring-boot-data-nosql/README.md)
+
 ### Spring Boot Travel Agency
 
 - [Highlights](spring-boot-travelagency/README.md)
