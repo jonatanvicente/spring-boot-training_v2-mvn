@@ -14,6 +14,8 @@ public class TravelAgencyService implements ITravelAgencyService{
     @Override
     public Mono<Ticket> getTicket(Customer c) {
 
+        //TODO - falta mapping customer - FactoryTicketBuilder
+
 /*        ticket = new BusTicket();
         ((BusTicket)ticket).setPlate("9099-MMK");
         ((BusTicket)ticket).setNumberOfSeats(50);
@@ -27,10 +29,10 @@ public class TravelAgencyService implements ITravelAgencyService{
         ((PlaneTicket)ticket).setType("Passenger");
         ((PlaneTicket)ticket).setNumberOfSeats(200);*/
 
-        ticket = new TrainTicket();
+/*        ticket = new TrainTicket();
         ((TrainTicket)ticket).setStops(3);
         ((TrainTicket)ticket).setType("Passenger");
-        ((TrainTicket)ticket).setNumberOfSeats(200);
+        ((TrainTicket)ticket).setNumberOfSeats(200);*/
 
 
         return Mono.just(ticket);
