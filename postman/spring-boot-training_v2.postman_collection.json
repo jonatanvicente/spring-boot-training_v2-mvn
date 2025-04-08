@@ -332,6 +332,28 @@
 			"response": []
 		},
 		{
+			"name": "GET Security Forbidden - Star Wars Vehicles",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8762/springboottraining/api/v1/starwars/vehiclesWithSecurity",
+					"host": [
+						"localhost"
+					],
+					"port": "8762",
+					"path": [
+						"springboottraining",
+						"api",
+						"v1",
+						"starwars",
+						"vehiclesWithSecurity"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "POST Security - Login Get Token",
 			"request": {
 				"auth": {
@@ -472,7 +494,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n      \"age\":20\n} ",
+					"raw": "{\n      \"age\":45\n} ",
 					"options": {
 						"raw": {
 							"language": "json"
